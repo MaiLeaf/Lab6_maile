@@ -7,8 +7,16 @@ def encode(numbers):
         result += str(encode_digit)
     return result
 
+'''
+jill's code
+'''
+def decode(password):
+    result = ''
+    for i in password:
+        decoded_digit = int(i) - 3
+        result += str(decoded_digit)
+    return result
 
-def decode():
     pass
 
 
@@ -32,7 +40,8 @@ def main():
             result = encode(numbers)
             pass
         elif option == 2:
-            print(f"The encoded password is {result}, and the original password is {numbers}.")
+            decoded_password = decode(result)
+            print(f"The encoded password is {result}, and the original password is {decoded_password}.")
             pass
         elif option == 3:
             break
